@@ -17,7 +17,7 @@ Every led has a definite index depending on its position in the cube. In the fol
 ![alt text](http://i.imgur.com/NvOLAko.png
  "Structure")
 
-So, for turning on the very first led with a red color, you will have to access LED at index 0,0,0 and send an array containing [255,0,0] (RGB for red).
+So, for turning on the very first led with a red color, you will have to access LED at index 0,0,0 and send an array containing 255,0,0 (RGB for red).
 
 Remember /leds endpoint expects the structure for the whole cube, so you will have to send the complete matrix on every request.
 
