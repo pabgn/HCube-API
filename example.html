@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>HCube API Example</title>
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	</head>
+	<body>
+		<input type="button" value="Send Matrix" id="send">
+	</body>
+	<script>
+		$(function() {
+			var final;			
+			$("#send").click(function(){
+				final = [];
+			    for(x=0;x<20;x++){ 
+					final[x] = new Array(); 
+					for(y=0;y<20;y++){ 
+					    final[x][y]= new Array(); 
+						for(z=0;z<20;z++){ 
+							red =Math.floor(Math.random() * 256);
+							green = Math.floor(Math.random() * 256);
+							blue = Math.floor(Math.random() * 256);
+			            	d = [red, green, blue];
+							final[x][y][z]=d; 
+						}
+				    } 
+				}
+				$.ajax
+			    ({
+			        type: "POST",
+			        url: 'http://127.0.0.1:8080/api/leds/',
+			        dataType: 'json',
+			        async: false,
+			        data: JSON.stringify({'data':final, 'key':'KDDJWR3847KDU'}),
+			        success: function () {}
+			    })
+    				
+			});
+		});
+	</script>
+</html>
