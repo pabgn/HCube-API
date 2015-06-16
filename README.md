@@ -26,8 +26,9 @@ Remember /leds endpoint expects the structure for the whole cube, so you will ha
 ![alt text](http://i.imgur.com/kFUYOxr.png
  "Structure")
  
- #### Example of request in JavaScript
- ###### Final structure containing color for every led
+### Example of request in JavaScript
+
+###### Final structure containing color for every led
  
  ```
     final = [];
@@ -46,7 +47,7 @@ Remember /leds endpoint expects the structure for the whole cube, so you will ha
 	}
 
 ```
- ###### Send request
+###### Send request
 ```
 $.ajax
     ({
